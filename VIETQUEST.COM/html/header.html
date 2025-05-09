@@ -1,0 +1,36 @@
+<div class="container header-container">
+  <!-- Logo + Tên -->
+  <div class="logo" style="display: flex; align-items: center; gap: 0px;">
+    <img src="../image/logo.png" alt="Logo" style="height: 150px;" />
+  </div>
+
+  <nav class="nav">
+    <a href="index.html">Trang chủ</a>
+  </nav>
+
+  <!-- Actions -->
+  <div class="actions">
+    <!-- Cài đặt Dropdown -->
+    <div class="settings-dropdown">
+      <button class="settings-btn" id="settingsToggle">⚙️ Cài đặt</button>
+      <div class="settings-menu" id="settingsMenu">
+        <label>
+          🌐 Ngôn ngữ:
+          <select id="langSelect">
+            <option value="vi">🇻🇳 Tiếng Việt</option>
+            <option value="en">🇺🇸 English</option>
+          </select>
+        </label>
+        <hr />
+        <!-- Đăng xuất -->
+        <button id="logoutBtn">🚪 Đăng xuất</button>
+      </div>
+    </div>
+
+    <!-- Join Game and PIN Input -->
+    <div class="pin-input-container">
+      <span class="pin-label">Nhập mã phòng để vào :</span>
+      <input class="pin-input" type="text" placeholder="123 456" />
+    </div>
+  </div>
+</div>

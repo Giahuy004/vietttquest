@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIETQUEST</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="header"></header>
+<div>
+  <h1>
+       <div class="actions">
+        <button class="btn" onclick="location.href='login.html'">Đăng nhập</button>
+        <button class="btn" onclick="location.href='register.html'">Đăng ký</button>
+  </h1>
+</div>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+       <div class="card" id="initialCard">
+  <h2>Tạo Câu Hỏi</h2>
+  <p>Chơi miễn phí với ngân hàng câu hỏi</p>
+  <button class="btn" id="createBtn">Bấm để tạo</button>
+</div>
+
+<div class="create-content" id="createContent" style="display: none;">
+  <h2>Đang Tạo Câu Hỏi</h2>
+  <p>Chờ một chút...</p>
+  <button class="btn" onclick="startGame()">Bắt đầu trò chơi</button>
+</div>
+      <div class="container layout">
+        <aside class="sidebar">
+          <h2> Chủ đề</h2>
+          <ul id="topic-list">
+            <li><img src="./image/logoTPHCM.png" className="icon" /> Miền Nam</li>
+            <li><img src="./image/logoHN.png"  className="icon" /> Miền Bắc</li>
+            <li><img src="./image/logoDN.png"  className="icon" /> Miền Trung</li>
+            <li><img src="./image/logoVN.png"  className="icon" /> Chơi cả 3 miền</li>
+          </ul>
+        </aside>
+        <section class="content">
+         <!-- <h1 id="topic-title" class="fade-in">Chào hỏi</h1>
+          <div id="card-container" class="card-grid"></div> -->
+        </section>
+      </div>
+      
+    </main>
+     <!-- FOOTER -->
+     <footer class="footer" id="footer"></footer>
+
+     <!-- SCRIPT -->
+     <script src="../js/script.js"></script>
+     <script>
+       function loadComponent(id, file) {
+         fetch(file)
+           .then((res) => res.text())
+           .then((data) => {
+             document.getElementById(id).innerHTML = data;
+           })
+           .catch((err) => console.error("Lỗi khi tải " + file, err));
+       }
+ 
+       loadComponent("header", "header.html");
+       loadComponent("footer", "footer.html");
+     </script>
+   </body>
+ </html>
